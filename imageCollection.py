@@ -46,8 +46,7 @@ def Getimage():
 					{'data-rawwidth':re.compile(r'\d{0,4}'), 'src':re.compile(r'https://')})
             for imgitem in listitem:
                 imgurl=imgitem.get('src')# 图片的url 地址
-                hostactual=imgurl[8:22]# 得到每张图片的host
-                #print(hostactual) #暂时用字符串 处理方式 得到图片链接，实际返回的数据是json数据，可用json处理
+                hostactual=imgurl[8:22]# 得到每张图片的host               
                 headerimg['Host']=hostactual# 设置没每张图片的 host
                 IMGcontent= HTTP.request('GET',imgurl,headers=headerimg)
                 with open('./images'+str(questionId)+'/'+str(imageindex)+'.jpg','wb') as f:
