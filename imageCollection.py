@@ -11,9 +11,9 @@ HTTP=urllib3.PoolManager()
 urllib3.disable_warnings()
 # 需要手动自定义
 questionId=34243513# 知乎问题id
-oauthString='c3cef7c66a1843f8b3a9e6a1e3160e20'# 请求知乎时的oath(浏览器请求header里)
-client_id='Qwe7NIZyoQLjeBZawKEKcjag'# 百度人脸识别 应用ID
-client_secret='eraO3x5cfioGh04yYQvUxmwX7tVxp4ry' #百度人脸识别 密钥
+oauthString=''# 请求知乎时的oath(浏览器请求header里)
+client_id=''# 百度人脸识别 应用ID (请查阅百度 人脸识别文档)
+client_secret='' #百度人脸识别 密钥
 Url='https://www.zhihu.com/question/'+str(questionId)
 
 
